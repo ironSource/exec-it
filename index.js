@@ -8,14 +8,14 @@ var fs = require('fs');
 var MultiExecutor = require('./lib/MultiExecutor.js');
 
 var conf = rc('remote-exec', {
-	c: 'echo Hello',
 	p: 22,
 	l: 'ec2-user',
-	i: '~/.ssh/id_rsa'
+	i: process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'] + '/.ssh/id_rsa'
 });
 
-var pathToPrivateKey = path.normalize(conf.i);
-var privateKey = fs.readFileSync(pathToPrivateKey);
+var command = (conf.c === undefined) ? fs.readFileSync(conf.f) : conf.c;
 
-var multiExecutor = new MultiExecutor(conf.c, conf.p, conf.l, privateKey);
+var privateKey = fs.readFileSync(conf.i);
+
+var multiExecutor = new MultiExecutor(command, conf.p, conf.l, privateKey);
 multiExecutor.start();

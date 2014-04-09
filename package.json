@@ -1,6 +1,6 @@
 {
   "name": "remote-exec2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Executes a command on a remote machine using ssh connection",
   "main": "index.js",
   "bin": "index.js",
