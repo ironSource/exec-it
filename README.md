@@ -11,7 +11,7 @@ npm install remote-exec2
 For example, print uptime for hosts listed in host-list.txt file
 
 ```sh
-cat host-list.txt | remote-exec2 -i ~/.ssh/id_rsa -u ec2-user -c uptime
+cat host-list.txt | remote-exec2 -c uptime
 ```
 
 ## Options
