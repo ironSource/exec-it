@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-npm install remote-exec
+npm install remote-exec2
 ```
 
 ## Run
