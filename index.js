@@ -1,3 +1,4 @@
+#!/usr/local/bin/node
 
 var _ = require('lodash');
 var path = require('path');
