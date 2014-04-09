@@ -1,0 +1,19 @@
+{
+  "name": "remote-exec",
+  "version": "0.0.0",
+  "description": "Executes a command on a remote machine using ssh connection",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "mocha test/*.test.js"
+  },
+  "author": "Roman Grudzinski",
+  "license": "ISC",
+  "dependencies": {
+    "ssh2": "^0.2.21",
+    "split": "^0.3.0",
+    "debug": "^0.8.0",
+    "rc": "^0.3.4",
+    "lodash": "^2.4.1"
+  }
+}
