@@ -8,6 +8,10 @@
     "test": "mocha test/*.test.js"
   },
   "author": "Roman Grudzinski",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ironSource/remote-exec.git"
+  },
   "license": "ISC",
   "dependencies": {
     "ssh2": "^0.2.21",
