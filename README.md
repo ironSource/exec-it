@@ -1,4 +1,4 @@
-# remote-exec2
+# exec-it
 
 ## Install
 
