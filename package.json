@@ -5,12 +5,12 @@
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "test": "mocha test/*.test.js"
+    "test": "mocha"
   },
-  "author": "Roman Grudzinski",
+  "author": "Roman Grudzinski, Yaniv Kessler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ironSource/remote-exec.git"
+    "url": "https://github.com/ironSource/exec-it.git"
   },
   "license": "ISC",
   "dependencies": {
