@@ -11,7 +11,8 @@ var conf = rc('exec-it', {
 	p: 22,
 	l: 'ec2-user',
 	i: process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'] + '/.ssh/id_rsa',
-	cp: ''
+	cp: '',
+	n: true
 });
 
 if (conf.help || conf.usage) {
@@ -25,7 +26,7 @@ if (conf.help || conf.usage) {
 	return process.exit(0)
 }
 
-var command = conf.cp + (conf.c === undefined) ? fs.readFileSync(conf.f) : conf.c;
+var command = conf.cp + ((conf.c === undefined) ? fs.readFileSync(conf.f) : conf.c);
 
 var privateKey = fs.readFileSync(conf.i);
 
