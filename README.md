@@ -13,7 +13,7 @@ For example, print uptime for hosts listed in host-list.txt file
 ```sh
 cat host-list.txt | exec-it -c uptime
 ```
-
+this module plays very well with [ec2-instance-lister](https://github.com/aviramst/ec2-instance-lister)
 ## Options
 
  * ```-c``` command to execute on remote machine
