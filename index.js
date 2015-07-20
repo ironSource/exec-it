@@ -22,7 +22,8 @@ if (conf.help || conf.usage) {
  		'-f read command from a file, works only if -c is not specified\n' +
  		'-p ssh port, default is 22\n' +
  		'-l username on remote machine, default is ec2-user\n' +
- 		'-i private key, default is /a_home_dir/.ssh/id_rsa)\n')
+ 		'-i private key, default is /a_home_dir/.ssh/id_rsa)\n' +
+ 		'-h private key passphrase, default is none)\n')
 	return process.exit(0)
 }
 
@@ -30,5 +31,7 @@ var command = conf.cp + ((conf.c === undefined) ? fs.readFileSync(conf.f) : conf
 
 var privateKey = fs.readFileSync(conf.i);
 
-var multiExecutor = new MultiExecutor(command, conf.p, conf.l, privateKey);
+var passphrase = conf.h;
+
+var multiExecutor = new MultiExecutor(command, conf.p, conf.l, privateKey, passphrase);
 multiExecutor.start();
